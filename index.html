@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feirão de Serviços - Análise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://i.ibb.co/YFpLHQFb/1.png" type="image/png">
+  <meta name="description" content="Bem-vindo ao Feirão de Serviços! Aqui reunimos várias ofertas e oportunidades. Clique e conheça nosso site principal.">
+  <link rel="canonical" href="https://feiraoservicosparatodos.shop/">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f9;
+      color: #212529;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .presell-container {
+      max-width: 550px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      box-sizing: border-box;
+      animation: fadeIn 1s forwards ease-out;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
+
+    h1 { font-size: 2rem; font-weight: 700; margin-bottom: 10px; color: #FF3194; }
+    p.subtitle, p.info { font-size: 1.1rem; color: #555; line-height: 1.5; margin-bottom: 25px; }
+
+    .progress-bar-container {
+      width: 100%;
+      background-color: #e9ecef;
+      border-radius: 50px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      border: 1px solid #dee2e6;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 28px;
+      background: linear-gradient(90deg, #e05998, #FF3194);
+      border-radius: 50px;
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 15px;
+      transition: width 2.5s ease;
+    }
+
+    .progress-status { font-weight: 500; color: #FF3194; font-size: 1rem; margin-bottom: 10px; }
+
+    /* Botão atualizado com lupa, hover e clique */
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 15px 0;
+      margin-top: 20px;
+      background: linear-gradient(90deg, #e05998, #FF3194); /* padrão */
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(90deg, #ff7eb0, #ff61a6); /* mais claro ao passar o mouse */
+      transform: scale(1.02);
+    }
+
+    .cta-button:active {
+      background: linear-gradient(90deg, #c2366d, #d13f88); /* mais escuro ao clicar */
+      transform: scale(0.97);
+    }
+
+    footer {
+      margin-top: 22px; padding-top: 18px; border-top:1px solid #eee;
+      color:#666; font-size:0.9rem; text-align:center;
+    }
+
+    footer a { color:#666; text-decoration:none; margin:0 5px; }
+    footer a:hover { text-decoration:underline; }
+
+    .transparency { font-size:0.9rem; color:#444; margin-top:12px; text-align:center; }
+    .disclaimer { font-size:0.9rem; color:#666; margin-top:10px; text-align:center; }
+  </style>
+</head>
+<body>
+
+  <div class="presell-container">
+    <h1>Bem-vindo ao Feirão de Serviços!</h1>
+    <p class="info">Aqui reunimos várias ofertas e oportunidades. Clique abaixo para visitar nosso site principal.</p>
+
+    <div class="progress-bar-container">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
+    <div id="progressStatus" class="progress-status">Analisando dados...</div>
+
+    <!-- Botão seguro com lupa -->
+    <a id="ctaButton" href="https://feiraodeoutubro2025.github.io/k2025/" target="_blank" rel="noopener noreferrer" class="cta-button">
+      🔍 Acessar o site oficial
+    </a>
+
+    <!-- Transparência -->
+    <div class="transparency">
+      <strong>Transparência:</strong> O link acima leva diretamente ao site indicado. Contato: <a href="mailto:contato@feiraoservicosparatodos.shop">contato@feiraoservicosparatodos.shop</a>
+    </div>
+    <p class="disclaimer">
+      Você será direcionado para: <strong id="destinoVisivel">https://feiraodeoutubro2025.github.io/k2025/</strong>
+    </p>
+  </div>
+
+  <footer>
+    <div>© <span id="anoAtual"></span> Feirão de Serviços — Todos os direitos reservados.</div>
+    <div>
+      <a href="privacy.html">Política de Privacidade</a> ·
+      <a href="terms.html">Termos de Uso</a> ·
+      <a href="copyright.html">Direitos Autorais</a> ·
+      <a href="mailto:contato@feiraoservicosparatodos.shop">Contato</a>
+    </div>
+  </footer>
+  <script>document.getElementById('anoAtual').textContent = new Date().getFullYear();</script>
+
+  <!-- JSON-LD Organização -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Feirão de Serviços",
+    "url": "https://feiraoservicosparatodos.shop",
+    "logo": "https://i.ibb.co/YFpLHQFb/1.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "email": "contato@feiraoservicosparatodos.shop",
+      "contactType": "customer support",
+      "availableLanguage": ["Portuguese","English"]
+    }]
+  }
+  </script>
+
+  <script>
+    // Progress bar animada (100% seguro, sem redirecionamento automático)
+    document.addEventListener('DOMContentLoaded', function () {
+      const progressBar = document.getElementById('progressBar');
+      const progressStatus = document.getElementById('progressStatus');
+      let percent = 0;
+      const interval = setInterval(() => {
+        if (percent < 100) {
+          percent++;
+          progressBar.style.width = percent + '%';
+          progressBar.textContent = percent + '%';
+        } else {
+          clearInterval(interval);
+          progressStatus.textContent = 'Análise pronta! Clique abaixo para acessar o site oficial.';
+        }
+      }, 25);
+    });
+  </script>
+
+</body>
+</html>
